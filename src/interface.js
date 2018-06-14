@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+  $('#current-city').change(function(){
+    var city = $('#current-city').val();
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q='
+    var token = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed'
+    var units = '&units=metric'
+
+    $.get(url + city + token + units, function(data) {
+      $('#current-temperature').text(data.main.temp);
+    });
+  });
+
   var thermostat = new Thermostat();
   $('#temperature').text(thermostat.temperature);
 
