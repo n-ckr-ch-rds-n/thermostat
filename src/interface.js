@@ -10,8 +10,13 @@ $(document).ready(function() {
       $('#current-temperature').text(data.main.temp);
     });
   });
-
   var thermostat = new Thermostat();
+  //
+  // var API_data = $.getJSON('http://localhost:9292');
+  //
+  // var saved_current_city = API_data.responseJSON.current_city;
+  // var saved_temperature = API_data.responseJSON.temperature;
+
   $('#temperature').text(thermostat.temperature);
 
   $('#temperature-up').on('click', function() {

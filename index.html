@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Thermostat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link href='css/style.css' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
 </head>
 <body>
-  <section>
+  <!-- <section> -->
+    <header>
     <h1>Current temperature: <span id="current-temperature"></span></h1>
+  </header>
+  <section>
+    <nav>
     <select id='current-city'>
       <option value='London'>London</option>
       <option value='Tokyo'>Tokyo</option>
@@ -14,18 +21,27 @@
       <option value='Prague'>Prague</option>
       <option value='Vilnius'>Vilnius</option>
     </select>
+  </nav>
+    <article>
     <h2 id="temperature">Some text</h2>
     <p>
-      <button id="temperature-up">+</button>
-      <button id="temperature-down">-</button><br>
-      <button id="temperature-reset">reset</button><br>
-      power saving mode is <span id="power-saving-status">on</span><br>
-      <button id="powersaving-on">PSM on</button>
-      <button id="powersaving-off">PSM off</button>
+      <button type="button" class="btn btn-danger" id="temperature-up">+</button>
+      <button type="button" class="btn btn-info" id="temperature-down">-</button><br><br>
+      <button class="btn btn-primary btn-lg" id="temperature-reset">reset</button><br>
     </p>
-  </section>
+  </article>
+</section>
+      <footer>
+      Power saving mode is <span id="power-saving-status">on</span><br>
+      <button type="button" class="btn btn-outline-dark" id="powersaving-on">PSM on</button>
+      <button type="button" class="btn btn-outline-dark" id="powersaving-off">PSM off</button>
+    </footer>
+
+  <!-- </section> -->
   <script src="src/thermostat.js"></script>
   <script src="src/jquery.min.js"></script>
   <script src="src/interface.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 </html>
