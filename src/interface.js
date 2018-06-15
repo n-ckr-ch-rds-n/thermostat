@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+  $.get("http://localhost:9292", function(data) {
+    $('#temperature').text(data.temperature);
+  });
+
   $('#current-city').change(function(){
     var city = $('#current-city').val();
     var url = 'http://api.openweathermap.org/data/2.5/weather?q='
@@ -16,6 +20,7 @@ $(document).ready(function() {
   //
   // var saved_current_city = API_data.responseJSON.current_city;
   // var saved_temperature = API_data.responseJSON.temperature;
+
 
   $('#temperature').text(thermostat.temperature);
 
